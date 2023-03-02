@@ -38,15 +38,19 @@
   },
   "exports": {
     ".": {
-      "require": "./build/cjs/index.js"
+      "import": "./build/esm/index.js",
+      "require": "./build/cjs/index.js",
+      "types": "./build/dts/index.d.ts"
     },
     "./*": {
-      "require": "./build/cjs/*.js"
+      "import": "./build/esm/*.js",
+      "require": "./build/cjs/*.js",
+      "types": "./build/dts/*.d.ts"
     }
   },
   "dependencies": {
-    "@effect/data": "~0.2.0",
-    "@effect/io": "~0.3.0"
+    "@effect/data": "~0.3.1",
+    "@effect/io": "~0.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",
