@@ -37,15 +37,10 @@
     "coverage": "vitest run --coverage"
   },
   "exports": {
-    ".": {
-      "import": "./build/esm/index.js",
-      "require": "./build/cjs/index.js",
-      "types": "./build/dts/index.d.ts"
-    },
     "./*": {
-      "import": "./build/esm/*.js",
-      "require": "./build/cjs/*.js",
-      "types": "./build/dts/*.d.ts"
+      "import": "./dist/mjs/*.mjs",
+      "require": "./dist/*.js",
+      "types": "./dist/*.d.ts"
     }
   },
   "dependencies": {
